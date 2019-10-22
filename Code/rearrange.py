@@ -14,5 +14,16 @@ def swapArgs(args):
     return relist
 
 
+def reverseArgs(args):
+    if len(args) <= 2:
+        print('Please neter a list of words to swap.\n')
+        return
+    relist = args[1:]
+    for i in range(0, len(relist)):
+        relist.insert(i, relist.pop())
+    return relist
+
+
 if __name__ == '__main__':
     print(swapArgs(sys.argv))
+    print(reverseArgs(sys.argv))
